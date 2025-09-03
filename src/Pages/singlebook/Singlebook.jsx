@@ -29,7 +29,7 @@ const SingleBook = () => {
       const response = await axios.delete(`http://localhost:3000/book/${id}`);
       if (response.status === 200) {
         alert("Book deleted successfully");
-        navigate("/"); // redirect to homepage
+        navigate("/"); // redirect to homepage..
       }
     } catch (error) {
       console.error("Error deleting book:", error);
