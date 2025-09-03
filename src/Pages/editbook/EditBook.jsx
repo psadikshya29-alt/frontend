@@ -39,7 +39,7 @@ const EditBook = () => {
 
     try {
       const response = await axios.patch(
-        `http://localhost:3000/book/${id}`,
+        `https://backend-2iyf.onrender.com/book/${id}`,
         formData
       );
       if (response.status === 200) {
@@ -57,7 +57,9 @@ const EditBook = () => {
   // Fetch book data for the given ID
   const fetchBook = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/book/${id}`);
+      const response = await axios.get(
+        `https://backend-2iyf.onrender.com/book/${id}`
+      );
       if (response.status === 200 && response.data?.data) {
         const book = response.data.data;
         setData({
@@ -210,5 +212,3 @@ const EditBook = () => {
 };
 
 export default EditBook;
-
-

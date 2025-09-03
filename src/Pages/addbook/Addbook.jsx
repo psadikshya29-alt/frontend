@@ -15,7 +15,7 @@ const AddBook = () => {
 
   // const handlesubmit = async () => {
 
-  //   const response = await axios.post("http://localhost:3000/book", {
+  //   const response = await axios.post("https://backend-2iyf.onrender.com/book", {
   //     bookName,
   //     bookPrice,
   //     isbnNumber,
@@ -53,7 +53,10 @@ const AddBook = () => {
     });
     formData.append("image", image);
 
-    const response = await axios.post("http://localhost:3000/book", formData);
+    const response = await axios.post(
+      "https://backend-2iyf.onrender.com/book",
+      formData
+    );
     if (response.status === 201) {
       navigate("/");
     } else {
