@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Component/Navbar";
-import Card from "../Component/Card";
+import Navbar from "../components/Navbar";
+import Card from "../components/Card";
 import axios from "axios";
 
 const Home = () => {
